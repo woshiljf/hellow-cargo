@@ -6,6 +6,7 @@ fn main() {
     println!("Hello, world!ffff");
     println!("请输入你的猜测数");
     get_name();
+    lean_loop();
     let msg = "猜测错误";
     let secret_number = rand::thread_rng().gen_range(1..101);
     println!("随机数是{}", secret_number);
@@ -26,6 +27,16 @@ fn main() {
                 continue;
             }
         };
+
+        if (guess < 1 || guess > 100) {
+            println!("请输入1-100之间的数字");
+        }
+
+        let condition = true;
+
+        let a = if condition { "342342" } else { "55" };
+
+        print!("{}", a);
 
         // turple
 
@@ -48,8 +59,48 @@ fn main() {
 }
 
 fn get_name() -> i32 {
-
     return 6;
+}
 
- 
+// loop 循环
+fn lean_loop() {
+    let mut count = 1;
+
+    let result = loop {
+        count += 1;
+        if count == 10 {
+            break count * 2;
+        }
+    };
+
+    print!("{}", result)
+}
+// while 循环
+fn lean_while() {
+    let mut count = 1;
+
+    while count != 6 {
+        count += 1;
+    }
+
+    print!("{}", count);
+}
+
+
+fn lean_for() { 
+
+
+    let a = [1, 2, 3, 4, 5];
+    // 循环遍历
+    for element in a.iter() {
+
+        println!("{}", element);
+
+     }
+
+     for element in (1..10).rev() {
+
+        println!("{}", element);
+      }
+
 }
