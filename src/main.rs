@@ -16,8 +16,20 @@ fn main() {
     
     
         // 可以重复声明同名的变量，会覆盖上一个变量
-        let guess: u32 = guess.trim().parse().expect(msg);
+        // let guess: u32 = guess.trim().parse().expect(msg);
     
+
+        // 提升代码的健壮性，如果解析失败，让用户继续猜测
+        // 匹配，如果正确的话，会返回一个Ok，否则返回一个Err
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("请输入数字");
+                continue;
+            }
+         };
+
+
         match guess.cmp(&secret_number) {
     
             Ordering::Less => println!("猜小了"),
