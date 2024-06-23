@@ -1,9 +1,12 @@
+// use 使用其他的库进来
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 fn get_name() -> i32 {
     return 6;
 }
 
 fn lean_init() {
-
     println!("Hello, world!ffff");
     println!("请输入你的猜测数");
     get_name();
@@ -12,8 +15,6 @@ fn lean_init() {
     let secret_number = rand::thread_rng().gen_range(1..101);
     println!("随机数是{}", secret_number);
     loop {
-        let mut guess = String::new();
-
         io::stdin().read_line(&mut guess).expect(msg);
 
         // 可以重复声明同名的变量，会覆盖上一个变量
@@ -57,7 +58,6 @@ fn lean_init() {
             }
         }
     }
-    
 }
 // loop 循环
 fn lean_loop() {
@@ -83,21 +83,14 @@ fn lean_while() {
     print!("{}", count);
 }
 
-
-fn lean_for() { 
-
-
+fn lean_for() {
     let a = [1, 2, 3, 4, 5];
     // 循环遍历
     for element in a.iter() {
-
         println!("{}", element);
+    }
 
-     }
-
-     for element in (1..10).rev() {
-
+    for element in (1..10).rev() {
         println!("{}", element);
-      }
-
+    }
 }
