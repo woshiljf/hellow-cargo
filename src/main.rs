@@ -1,11 +1,10 @@
 // 入口函数
-
+mod struct623;
 fn main() {
-    let guess = 10;
-    let age = get_name(guess);
-    print!("{}", age)
+    // 623：结构体
+   let mut user = struct623::lean_struct();
+
+   panic!("{}", user.email);
 }
 
-fn get_name(age: i32) -> i32 {
-    age + 20
-}
+
