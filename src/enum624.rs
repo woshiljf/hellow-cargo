@@ -15,7 +15,13 @@ enum Message {
     Write(String),
     ChangeColor(i32, i32, i32)
 }
-
+// 给枚举实现方法
+impl Message { 
+    fn call(&self) {
+        println!("{:?}", self);
+    }
+    
+}
 pub fn testEnum() { 
 
    let ip =  route(IpAddrKind::V4);
