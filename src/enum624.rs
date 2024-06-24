@@ -25,9 +25,19 @@ impl Message {
 pub fn testEnum() { 
 
    let ip =  route(IpAddrKind::V4);
-   let m = Message::Write(String::from("hello"));
+   let w = Message::Write(String::from("hello"));
    let m = Message::ChangeColor((0), (244), (233));
    print!("{:?}---{:#?}", Message::Quit, m);
+
+   let x: i8 = 8;
+//    let y: Option<i32> = Some(5);
+   let y= 5;
+
+   let result = x + y;
+    
+   w.call();
+   m.call();
+
  }
 
  fn route(ip_kind: IpAddrKind) -> IpAddrKind { 
