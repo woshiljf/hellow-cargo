@@ -10,7 +10,7 @@ pub struct Rectangle {
 // 给结构体定义方法
 impl Rectangle {
     /**
-     * 关联函数
+     * 关联函数不是方法，关联函数的第一个参数不是self，也就是说不是结构体本身
      */
     fn square(size: u32) -> Rectangle {
         Rectangle {

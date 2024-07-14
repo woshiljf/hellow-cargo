@@ -22,6 +22,7 @@ pub fn lean_struct() -> User {
         active: true,
     };
 
+    // 更新字段, 使用点号,类似js 的扩展运算符
     let mut user2: User = User {
         email: String::from("1"),
         username: String::from("2"),
