@@ -5,6 +5,7 @@ mod struct_rectangle623;
 mod enum624;
 mod options714;
 mod match714;
+
 fn main() {
     // 623：结构体
 //    let mut user = struct623::lean_struct();
@@ -15,6 +16,7 @@ fn main() {
 
      match714::mainTest1()
 //    panic!("{}", user.email);
+
 }
 
 
